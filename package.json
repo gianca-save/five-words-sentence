@@ -1,0 +1,19 @@
+{
+  "name": "five-words-sentence",
+  "version": "1.0.0",
+  "description": "esercitazione 22-02-21",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gianca-save/five-words-sentence.git"
+  },
+  "author": "Giancarlo M. Saverino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gianca-save/five-words-sentence/issues"
+  },
+  "homepage": "https://github.com/gianca-save/five-words-sentence#readme"
+}
