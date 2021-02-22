@@ -1,4 +1,5 @@
 const readline = require('readline');
+const consola = require('consola');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -16,29 +17,29 @@ function exercise() {
             ++words;
         }
 
-        if (answer[i].match(/[a-z]/i)) {
+        if (answer[i].match(/[a-z]/i)) { //match verifica che il dato elemento appartenga all'alfabeto
             isString = true;
         }
     }
 
     if ((words >= 5) && (isString === true)) {
 
-        console.log('Bravo, hai inserito una frase di più di 5 parole: ',answer);
+        consola.success('Bravo, hai inserito una frase di più di 5 parole: ',answer);
         rl.close();
     }
 
     else if ((words < 5) && (isString === true)) {
-        console.log('Errore: hai inserito una frase di meno di 5 parole.\nRiprova');
+        consola.error('Hai inserito una frase di meno di 5 parole.\nRiprova');
         exercise();
     }
 
     else if ((words >= 5) && (isString === false)) {
-        console.log('Errore: quella che hai inserito non è una frase (non c\'è neanche una lettera!).\nRiprova');
+        consola.error('Quella che hai inserito non è una frase (non c\'è neanche una lettera!).\nRiprova');
         exercise();
     }
 
     else  {
-        console.log('Errore: quella che hai inserito non è una frase (non c\'è neanche una lettera!) e non compone nemmeno 5 parole!\nRiprova');
+        consola.error('Quella che hai inserito non è una frase (non c\'è neanche una lettera!) e non compone nemmeno 5 parole!\nRiprova');
         exercise();
     }
 
